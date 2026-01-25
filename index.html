@@ -50,6 +50,32 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   cursor: pointer;
 }
+.extra-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.extra-slider img {
+  flex: 0 0 auto; /* الصورة ثابتة الحجم داخل السلايدر */
+  width: 200px;   /* حجم الصورة */
+  height: 150px;  /* ارتفاع الصورة */
+  border-radius: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.extra-slider img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+/* لإخفاء شريط التمرير الافتراضي على بعض المتصفحات */
+.extra-slider::-webkit-scrollbar {
+  display: none;
+}
 
 <style>
     body {
@@ -135,7 +161,19 @@
     .btn:hover {
       background: #00c0a5;
     }
-
+<section class="extra-gallery">
+  <h2 style="text-align:center; margin-bottom: 20px;">معرض إضافي</h2>
+  <div class="extra-images">
+    <img src="26 (2).png" alt="صورة إضافية">
+    <img src="23 (1).png" alt="صورة إضافية">
+    <img src="17.png" alt="صورة إضافية">
+        <img src="1 (3).png" alt="صورة إضافية">
+        <img src="4 (5).png" alt="صورة إضافية">
+        <img src="6 (3).png" alt="صورة إضافية">
+        <img src="9 (5).png" alt="صورة إضافية">
+    <!-- أضف المزيد حسب الحاجة -->
+  </div>
+</section>
     footer {
       text-align: center;
       margin-top: 60px;
@@ -203,16 +241,4 @@
   </div>
 
 </section>
-<section class="extra-gallery">
-  <h2 style="text-align:center; margin-bottom: 20px;">معرض إضافي</h2>
-  <div class="extra-images">
-    <img src="26 (2).png" alt="صورة إضافية">
-    <img src="23 (1).png" alt="صورة إضافية">
-    <img src="17.png" alt="صورة إضافية">
-        <img src="1 (3).png" alt="صورة إضافية">
-        <img src="4 (5).png" alt="صورة إضافية">
-        <img src="6 (3).png" alt="صورة إضافية">
-        <img src="9 (5).png" alt="صورة إضافية">
-    <!-- أضف المزيد حسب الحاجة -->
-  </div>
-</section>
+
