@@ -1,79 +1,141 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: url('background4.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Sholi Shoes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.container {
-  padding: 100px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.4); /* خلفية نصف شفافة للنصوص */
-  border-radius: 20px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url('background4.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      direction: rtl;
+    }
 
-h1 {
-  font-size: 50px;
-  margin: 10px 0;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
+    .overlay {
+      background: rgba(0,0,0,0.55);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
 
-h2 {
-  font-weight: 300;
-  opacity: 0.9;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-}
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  margin-bottom: 40px;
-}
+    header h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
 
-.product-card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 18px;
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    header p {
+      font-size: 20px;
+      opacity: 0.9;
+    }
 
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-.product-card img {
-  width: 100%;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
+    .card {
+      background: rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-.product-card img:hover { transform: scale(1.05); }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
 
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 20px;
-  border-radius: 25px;
-  background: #00ffd5;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
 
-.btn:hover { background: #00c0a5; }
+    .card h3 {
+      margin: 10px 0 5px;
+    }
 
-footer {
-  margin-top: 50px;
-  font-size: 14px;
-  opacity: 0.7;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
+    .card span {
+      color: #00ffd5;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      background: #00ffd5;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #00c0a5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      opacity: 0.7;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+
+    <header>
+      <h1>Sholi Shoes 👟</h1>
+      <p>أحذية عصرية | Modern Shoes</p>
+    </header>
+
+    <section class="products">
+
+      <div class="card">
+        <img src="shoe1.jpg">
+        <h3>حذاء رياضي</h3>
+        <span>₪199</span><br>
+        <a class="btn" href="#">اطلب الآن</a>
+      </div>
+
+      <div class="card">
+        <img src="shoe2.jpg">
+        <h3>حذاء شبابي</h3>
+        <span>₪179</span><br>
+        <a class="btn" href="#">اطلب الآن</a>
+      </div>
+
+      <div class="card">
+        <img src="shoe3.jpg">
+        <h3>حذاء كاجوال</h3>
+        <span>₪159</span><br>
+        <a class="btn" href="#">اطلب الآن</a>
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Sholi Website
+    </footer>
+
+  </div>
+</body>
+</html>
