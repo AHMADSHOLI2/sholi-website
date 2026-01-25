@@ -19,6 +19,18 @@
   box-shadow: 0 15px 30px rgba(0,0,0,0.5);
   cursor: pointer;
 }
+    /* تأثير دخول الصور من الأسفل */
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 <style>
     body {
       margin: 0;
@@ -118,6 +130,17 @@
      style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 15px 20px; border-radius: 50px; font-size: 18px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 9999;">
     📱 واتساب
   </a>
+<script>
+  // لما الصفحة تحمل، أضف الكلاس 'show' لكل كرت
+  window.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('show');
+      }, index * 200); // تأخير 200ms لكل كرت
+    });
+  });
+</script>
 
 </body>
 </html>
